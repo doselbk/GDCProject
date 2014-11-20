@@ -44,7 +44,7 @@ The acceleration signal was separated into body and gravity acceleration signals
 The body linear acceleration and angular velocity were derived in time to obtain Jerk signals
 - tBodyAccJerk-XYZ
 - tBodyGryoJerk-XYZ
-- 
+
 The magnitude of the three-dimensional signals were calculated using the Euclidean norm
 - tBodyAccMag
 - tGravityAccMag
