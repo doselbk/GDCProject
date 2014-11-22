@@ -58,19 +58,3 @@ data.unzipped.dir <- paste(data.dir, "UCI HAR Dataset", sep = "/", collapse = "/
 activity.label <- read.table("./data/UCI HAR Dataset/activity_labels.txt", header=FALSE)
 features.label <- read.table("./data/UCI HAR Dataset/features.txt", header=FALSE)
 
-#features = read.table('./features.txt',header=FALSE); #imports features.txt
-#activityType = read.table('./activity_labels.txt',header=FALSE); #imports activity_labels.txt
-#subjectTrain = read.table('./train/subject_train.txt',header=FALSE); #imports subject_train.txt
-#xTrain = read.table('./train/x_train.txt',header=FALSE); #imports x_train.txt
-#yTrain = read.table('./train/y_train.txt',header=FALSE); #imports y_train.txt
-# Assigin column names to the data imported above
-#colnames(activityType) = c('activityId','activityType');
-#colnames(subjectTrain) = "subjectId";
-#colnames(xTrain) = features[,2];
-#colnames(yTrain) = "activityId";
-# cCreate the final training set by merging yTrain, subjectTrain, and xTrain
-#trainingData = cbind(yTrain,subjectTrain,xTrain);
-# Read in the test data
-#subjectTest = read.table('./test/subject_test.txt',header=FALSE); #imports subject_test.txt
-#xTest = read.table('./test/x_test.txt',header=FALSE); #imports x_test.txt
-#yTest = read.table('./test/y_test.txt',header=FALSE); #imports y_test.txt
