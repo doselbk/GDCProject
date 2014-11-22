@@ -29,5 +29,7 @@ if (!file.exists(data.dir)) {
 if (!file.exists(data.file)) {
   cat("downloading the data from", data.url, "to", data.dir, "\n")
   download.file(data.url, data.file, method = "curl")
+  cat("unzipping the data files\n")
+  unzip(data.file, exdir = data.dir)
 }
   
