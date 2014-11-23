@@ -55,6 +55,14 @@ data.unzipped.dir <- paste(data.dir, "UCI HAR Dataset", sep = "/", collapse = "/
 # /train/y_train | activity list
 # /train/X_train | train data file
 
-activity.label <- read.table("./data/UCI HAR Dataset/activity_labels.txt", header=FALSE)
-features.label <- read.table("./data/UCI HAR Dataset/features.txt", header=FALSE)
+activity.label <- read.table("./data/UCI HAR Dataset/activity_labels.txt", header=FALSE, col.names = c("ID", "Activity"))
+features.label <- read.table("./data/UCI HAR Dataset/features.txt", header=FALSE, col.names = c("ID", "Feature"))
+
+subject.test <- read.table("./data/UCI HAR Dataset/test/subject_test.txt", header=FALSE, col.names = c("Subject.ID"))
+activity.test <- read.table("./data/UCI HAR Dataset/test/y_test.txt", header=FALSE, col.names = c("Activity.ID"))
+data.test <- read.table("./data/UCI HAR Dataset/test/X_test.txt", header=FALSE, col.names = features.label$Feature)
+
+subject.train <- read.table("./data/UCI HAR Dataset/train/subject_train.txt", header=FALSE, col.names = ("Subject.ID"))
+activity.train <- read.table("./data/UCI HAR Dataset/train/y_train.txt", header=FALSE, col.names = c("Activity.ID"))
+data.train <- read.table("./data/UCI HAR Dataset/train/X_train.txt", header=FALSE, col.names = features.label$Feature)
 
