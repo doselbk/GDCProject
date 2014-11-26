@@ -14,17 +14,17 @@ packages.check <- function(require.packages) {
     }
 }
 
-
-
-# the data file source
-data.url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-
 # Check for the required packages
 # - if not found, install the missing package
 # - load the required packages
 
 require.packages <- c("plyr", "reshape2")
 packages.check(require.packages)
+
+
+
+# the data file source
+data.url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
 # Set the current directory as the working directory
 this.dir <- dirname(parent.frame(2)$ofile)
@@ -43,7 +43,7 @@ if (!file.exists(data.dir)) {
   cat("- creating", data.dir, "to save the data\n")
   dir.create(file.path(data.dir))
 } else {
-  cat("- found it\n")
+  cat("- found", data.dir, "\n")
 }
 
 ## Check the data file is in the data directory
